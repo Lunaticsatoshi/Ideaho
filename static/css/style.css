@@ -7,8 +7,16 @@ p {
 }
 
 .login__container{
-    width: 25px;
-    margin-top: 5rem;
+    width: 35rem;
+    margin-top: 10rem;
     text-align: center;
 
+}
+
+.title {
+    margin-top: 5rem;
+}
+
+.section {
+    margin-top: 0.3rem;
 }
