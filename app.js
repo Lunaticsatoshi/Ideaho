@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
+const path = require('path')
 
 //Database
 const connectDB = require('./config/db');
@@ -19,10 +20,15 @@ if (process.env.NODE_ENV === 'developemnt'){
 }
 
 
-//
- 
+//Handlebars 
 app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
+
+//Static Folders
+app.use(express.static(path.join(__dirname, 'static')))
+
+//Routes
+app.use('/', require('./routes/index'));
 
 const PORT = process.env.PORT || 3000;
 
