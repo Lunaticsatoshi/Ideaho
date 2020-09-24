@@ -18,9 +18,9 @@ module.exports = function (passport) {
                 image: profile.photos[0].value
             }
 
-            console.log(profile)
+            /* console.log(profile) */
             try {
-                let user = await User.findOne({googleId: profile.id})
+                let user = await User.findOne({ googleId: profile.id })
                 if(user){
                     done(null, user)
                 }
