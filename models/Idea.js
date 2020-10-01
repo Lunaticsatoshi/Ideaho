@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const StorySchema = new mongoose.Schema({
-    googleId: {
+const IdeaSchema = new mongoose.Schema({
+    title: {
         type: String,
         required: true,
         trim: true
@@ -17,10 +17,7 @@ const StorySchema = new mongoose.Schema({
     },
     userId: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true
-    },
-    image: {
-        type: String,
+        ref: 'User'
     },
     createdAt: {
         type: Date,
@@ -28,4 +25,4 @@ const StorySchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('User', StorySchema);
+module.exports = mongoose.model('Idea', IdeaSchema);
