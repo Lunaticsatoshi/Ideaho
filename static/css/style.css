@@ -1,6 +1,7 @@
-/* body{
-    background: black;
-} */
+body{
+    background-color: black;
+    color: white;
+}
 
 p {
     margin: 0.6rem 0 !important;
@@ -10,7 +11,7 @@ p {
     width: 35rem;
     margin-top: 10rem;
     text-align: center;
-
+    color: black;
 }
 
 .title {

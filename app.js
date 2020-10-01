@@ -5,6 +5,8 @@ const exphbs = require('express-handlebars');
 const passport = require('passport');
 const session = require('express-session');
 const path = require('path');
+const MongoStore = require('connect-mongo')(session);
+const mongoose = require('mongoose');
 
 //Database
 const connectDB = require('./config/db');
@@ -35,6 +37,9 @@ app.use(session({
   secret: 'Loli For Life',
   resave: false,
   saveUninitialized: false,
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection
+  })
   /* cookie: { secure: true } */
 }))
 
