@@ -21,3 +21,21 @@ p {
 .section {
     margin-top: 0.3rem;
 }
+
+.nav-wrapper{
+    margin: 0.5rem 2rem;
+}
+
+.findbtn{
+    background-color: #5E35B1;
+    margin-top: 5rem;
+}
+
+.link{
+    font-size: 1.9rem;
+}
+
+.brand-title{
+    font-size: 3.5rem;
+}
+  

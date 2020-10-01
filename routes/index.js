@@ -13,7 +13,9 @@ router.get('/',ensureGuest, (req,res) => {
 //Home page
 //@request: Get
 router.get('/home', ensureAuth, (req,res) => {
-    res.render('home')
+    res.render('home', {
+        name: req.user.firstName
+    })
 })
 
 module.exports = router
